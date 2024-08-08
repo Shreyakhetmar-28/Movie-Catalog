@@ -1,0 +1,280 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Movie Store | Movies List-</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+<link href="style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- start plugins -->
+<script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<style type="text/css" media="screen">
+        #trailer .modal-dialog {
+            margin-top: 200px;
+            width: 640px;
+            height: 480px;
+        }
+        .hanging-close {
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            z-index: 9001;
+        }
+        #trailer-video {
+            width: 100%;
+            height: 100%;
+        }
+        .movie-tile:hover {
+            cursor: pointer;
+        }
+        .scale-media {
+            padding-bottom: 56.25%;
+            position: relative;
+        }
+        .scale-media iframe {
+            border: none;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            background-color: gray;
+          }
+    </style>
+<script src="responsiveslides.min.js"></script>
+<script>
+    $(function () {
+      $("#slider").responsiveSlides({
+        auto: true,
+        nav: true,
+        speed: 500,
+        namespace: "callbacks",
+        pager: true,
+      });
+    });
+
+    // Pause the video when the modal is closed
+    $(document).on('click', '.hanging-close, .modal-backdrop, .modal', function (event) {
+        // Remove the src so the player itself gets removed, as this is the only
+        // reliable way to ensure the video stops playing in IE
+        $("#trailer-video-container").empty();
+    });
+    // Start playing the video whenever the trailer modal is opened
+    $(document).on('click', '.movie-tile', function (event) {
+        var trailerYouTubeId = $(this).attr('data-trailer-youtube-id')
+        var sourceUrl = 'http://www.youtube.com/embed/' + trailerYouTubeId + '?autoplay=1&html5=1';
+        $("#trailer-video-container").empty().append($("<iframe></iframe>", {
+          'id': 'trailer-video',
+          'type': 'text-html',
+          'src': sourceUrl,
+          'frameborder': 0
+        }));
+    });
+</script>
+</head>
+
+<body>
+<!-- Trailer Video Modal -->
+<div class="modal" id="trailer">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <a href="#" class="hanging-close" data-dismiss="modal" aria-hidden="true">
+        <img src="https://lh5.ggpht.com/v4-628SilF0HtHuHdu5EzxD7WRqOrrTIDi_MhEG6_qkNtUK5Wg7KPkofp_VJoF7RS2LhxwEFCO1ICHZlc-o_=s0#w=24&h=24"/>
+      </a>
+      <div class="scale-media" id="trailer-video-container">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="container_wrap">
+    <div class="header_top">
+        <div class="col-sm-3 logo"><a href="index.html"><img src="logo.png" alt=""/></a></div>
+      <div class="clearfix"> </div>
+        </div>
+        <div class="slider">
+     <div class="callbacks_container">
+        <ul class="rslides" id="slider">
+          
+<li><img src="Drishyam.jpg" class="img-responsive" alt=""/>
+      <div class="button">
+      <a href="#" class="hvr-shutter-out-horizontal movie-tile" data-trailer-youtube-id="AuuX2j14NBg" data-toggle="modal" data-target="#trailer">Watch Now</a>
+    </div>
+</li>
+
+<li><img src="Sita Ramam.jpg" class="img-responsive" alt=""/>
+      <div class="button">
+      <a href="#" class="hvr-shutter-out-horizontal movie-tile" data-trailer-youtube-id="3UKsbXQUwqw" data-toggle="modal" data-target="#trailer">Watch Now</a>
+    </div>
+</li>
+
+<li><img src="Brahmastra.jpg" class="img-responsive" alt=""/>
+      <div class="button">
+      <a href="#" class="hvr-shutter-out-horizontal movie-tile" data-trailer-youtube-id="BUjXzrgntcY" data-toggle="modal" data-target="#trailer">Watch Now</a>
+    </div>
+</li>
+
+        </ul>
+      </div>
+      </div>
+      <div class="content">
+        <div class="box_1">
+         <h1 class="m_2"> Movies List -</h1>
+         
+    <div class="clearfix"> </div>
+    </div>
+    <div class="box_2"></div>
+      
+<div class="row">
+<div class="col-md-4">
+  <div class="col_2">
+    <div class="m_7 movie-tile" data-trailer-youtube-id="A_HQdwRDRrw" data-toggle="modal" data-target="#trailer"><img src="Shaitaan.jpg" class="img-responsive cover" alt=""/></div>
+    <div class="caption1">
+          <p class="m_3">Shaitaan</p>
+    </div>
+        <ul class="list_4">
+          <li><p><b>Storyline</b> : The story of the film is about a family that finds trouble when their daughter falls under the spell of black magic cast by a stranger, and they set out to stop the possession and uncover the stranger's motives.                                          </p></li>
+        <li><b>Rating</b> : &nbsp;&nbsp;<p><img src="rating4.png" alt=""></p></li>
+        <li><b>Release</b> : &nbsp;<span class="m_4">Mar 8, 2023</span> </li>
+        <div class="clearfix"> </div>
+      </ul>
+    </div>
+</div>
+
+<div class="col-md-4">
+  <div class="col_2">
+    <div class="m_7 movie-tile" data-trailer-youtube-id="p4Z_ueeT_XQ" data-toggle="modal" data-target="#trailer"><img src="Kalank1.jpg" class="img-responsive cover" alt=""/></div>
+    <div class="caption1">
+          <p class="m_3">Kalank</p>
+    </div>
+        <ul class="list_4">
+          <li><p><b>Storyline</b> : Satya Chaudhry is told by her doctor that she has cancer and will die soon. She goes back to her native village in the Rajputana area and requests her acquaintance, Roop, to provide companionship to her husband, Dev Chaudhry who runs a liberal newspaper.</p></li>
+        <li><b>Rating</b> : &nbsp;&nbsp;<p><img src="rating4.png" alt=""></p></li>
+        <li><b>Release</b> : &nbsp;<span class="m_4">Apr 17, 2019</span> </li>
+        <div class="clearfix"> </div>
+      </ul>
+    </div>
+</div>
+
+<div class="col-md-4">
+  <div class="col_2">
+    <div class="m_7 movie-tile" data-trailer-youtube-id="7779JrWy04g" data-toggle="modal" data-target="#trailer"><img src="Neerja.jpg" class="img-responsive cover" alt=""/></div>
+    <div class="caption1">
+          <p class="m_3">Neerja</p>
+    </div>
+        <ul class="list_4">
+          <li><p><b>Storyline</b> : The plot is based on a real-life event: The film is shown from the point of view of the head purser of the flight, Neerja Bhanot, who thwarted the hijack attempt by alerting the pilots, thus grounding the plane. Bhanot died trying to help save the passengers and crew, of whom 359 of the 379 on board survived.</p></li>
+        <li><b>Rating</b> : &nbsp;&nbsp;<p><img src="rating3.png" alt=""></p></li>
+        <li><b>Release</b> : &nbsp;<span class="m_4">Feb 19, 2016</span> </li>
+        <div class="clearfix"> </div>
+      </ul>
+    </div>
+</div>
+</div><div class="row">
+<div class="col-md-4">
+  <div class="col_2">
+    <div class="m_7 movie-tile" data-trailer-youtube-id="6L6XqWoS8tw" data-toggle="modal" data-target="#trailer"><img src="M.S.dhoni.jpg" class="img-responsive cover" alt=""/></div>
+    <div class="caption1">
+          <p class="m_3">M.S.Dhoni</p>
+    </div>
+        <ul class="list_4">
+          <li><p><b>Storyline</b> : The idea of the biopic was put forward by Dhoni's manager, Arun Pandey, after encountering an incident at an airport after the 2011 Cricket World Cup Final. Development began two years later, with the consent of Dhoni.Pandey recruited a number of people for researching into Dhoni's background and his life events. Dhoni eventually became a consultant on the film.</p></li>
+        <li><b>Rating</b> : &nbsp;&nbsp;<p><img src="rating4.png" alt=""></p></li>
+        <li><b>Release</b> : &nbsp;<span class="m_4">Sep 30, 2016</span> </li>
+        <div class="clearfix"> </div>
+      </ul>
+    </div>
+</div>
+
+<div class="col-md-4">
+  <div class="col_2">
+    <div class="m_7 movie-tile" data-trailer-youtube-id="ruO0VrqOkdE" data-toggle="modal" data-target="#trailer"><img src="Villain.jpg" class="img-responsive cover" alt=""/></div>
+    <div class="caption1">
+          <p class="m_3">Villain</p>
+    </div>
+        <ul class="list_4">
+          <li><p><b>Storyline</b> : A young woman Aisha Verma, tries to leave a message for her husband, Guru Divekar, when a masked man who has entered her house, kills her by defenestration. At her funeral, CBI officer Aditya Rathore points out that it is vital to track down the murderer or Aisha's husband, will go on a killing spree.</p></li>
+        <li><b>Rating</b> : &nbsp;&nbsp;<p><img src="rating5.png" alt=""></p></li>
+        <li><b>Release</b> : &nbsp;<span class="m_4">Jun 27, 2014</span> </li>
+        <div class="clearfix"> </div>
+      </ul>
+    </div>
+</div>
+
+<div class="col-md-4">
+  <div class="col_2">
+    <div class="m_7 movie-tile" data-trailer-youtube-id="Rbp2XUSeUNE" data-toggle="modal" data-target="#trailer"><img src="Yeh jawaani hai deewani.jpg" class="img-responsive cover" alt=""/></div>
+    <div class="caption1">
+          <p class="m_3">Yeh jawaani hai deewani</p>
+    </div>
+        <ul class="list_4">
+          <li><p><b>Storyline</b> : Naina Talwar is a medical student who feels like an outcast due to her introverted nature. An encounter with an old classmate, Aditi Mehra, makes her realize that she wants more from life.Naina realizes that love and marriage have no part in his plans and remains silent about her feelings.</p></li>
+        <li><b>Rating</b> : &nbsp;&nbsp;<p><img src="rating5.png" alt=""></p></li>
+        <li><b>Release</b> : &nbsp;<span class="m_4">May 13, 2013</span> </li>
+        <div class="clearfix"> </div>
+      </ul>
+    </div>
+</div>
+
+</div><div class="row">
+<div class="col-md-4">
+  <div class="col_2">
+    <div class="m_7 movie-tile" data-trailer-youtube-id="5DkO7ksXY8E" data-toggle="modal" data-target="#trailer"><img src="Dear-Zindagi.jpg" class="img-responsive cover" alt=""/></div>
+    <div class="caption1">
+          <p class="m_3">Dear-Zindagi</p>
+    </div>
+        <ul class="list_4">
+          <li><p><b>Storyline</b> : Kaira admits to Jug that she has grown to have feelings for him. Jug responds it is normal for a patient to feel this way about their therapist, and while he likes her platonically, a relationship would not be possible between them. The two share a hug before Kaira leaves. Kaira finally completes her short film, which she had worked on for years.</p></li>
+        <li><b>Rating</b> : &nbsp;&nbsp;<p><img src="rating3.png" alt=""></p></li>
+        <li><b>Release</b> : &nbsp;<span class="m_4">Nov 25, 2016</span> </li>
+        <div class="clearfix"> </div>
+      </ul>
+    </div>
+</div>
+
+<div class="col-md-4">
+  <div class="col_2">
+    <div class="m_7 movie-tile" data-trailer-youtube-id="JwNHueOt0AI" data-toggle="modal" data-target="#trailer"><img src="Parmanu.jpg" class="img-responsive cover" alt=""/></div>
+    <div class="caption1">
+          <p class="m_3">Parmanu</p>
+    </div>
+        <ul class="list_4">
+          <li><p><b>Storyline</b> : 
+            In 1995, Ashwat Raina, an IAS officer from the Research and Analysis Wing, suggests the ministers perform a retaliatory nuclear test in response to the recent nuclear missile tests by China. However, he is ridiculed, and the PMO secretary Suresh Yadav tells him to keep the file of his plan brief</p></li>
+        <li><b>Rating</b> : &nbsp;&nbsp;<p><img src="rating3.png" alt=""></p></li>
+        <li><b>Release</b> : &nbsp;<span class="m_4">May 25, 2018</span> </li>
+        <div class="clearfix"> </div>
+      </ul>
+    </div>
+</div>
+
+<div class="col-md-4">
+  <div class="col_2">
+    <div class="m_7 movie-tile" data-trailer-youtube-id="Vjx7wxjCv9A" data-toggle="modal" data-target="#trailer"><img src="PK .jpg" class="img-responsive cover" alt=""/></div>
+    <div class="caption1">
+          <p class="m_3">PK</p>
+    </div>
+        <ul class="list_4">
+          <li><p><b>Storyline</b> : A nude humanoid alien lands on Earth on a research mission in Rajasthan, India, and is stranded when the remote control to summon his spaceship is stolen. In Belgium, an Indian woman, Jagat "Jaggu" Janani Sahni, meets a Pakistani man, Sarfaraz Yousuf, and falls in love with him.</p></li>
+        <li><b>Rating</b> : &nbsp;&nbsp;<p><img src="rating3.png" alt=""></p></li>
+        <li><b>Release</b> : &nbsp;<span class="m_4">Dec 19, 2014</span> </li>
+        <div class="clearfix"> </div>
+      </ul>
+    </div>
+</div>
+
+</div>
+
+      <div class="clearfix"> </div>
+    </div>
+
+      </div>
+   </div>
+ </div>
+</body>
+</html>
